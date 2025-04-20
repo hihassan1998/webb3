@@ -20,19 +20,30 @@
 
     <section>
         <h2>1. Slumpmässig array</h2>
-        
+        <button onclick="sortedArray()">Generera array</button>
+        <p><strong>Osorterad:</strong> <span id="unsorted"></span></p>
+        <p><strong>Sorterad:</strong> <span id="sorted"></span></p>
     </section>
 
     <section>
         <h2>2. Registreringsformulär (JavaScript-validering)</h2>
-        
+        <form id="jsForm" onsubmit="return validateJSForm()" method="post" action="thankyou.php">
+            <label>Användarnamn: <input type="text" id="jsUsername" name="username" /></label><br />
+            <label>Lösenord: <input type="password" id="jsPassword" name="password" /></label><br />
+            <label>Bekräfta lösenord: <input type="password" id="jsConfirmPassword"
+                    name="confirmPassword" /></label><br />
+            <label>E-post: <input type="text" id="jsEmail" name="email" /></label><br />
+            <label><input type="checkbox" id="jsTerms" name="terms" /> Jag har läst villkoren</label><br />
+            <input class="button" type="submit" value="Registrera" />
+            <p id="jsError" class="error"></p>
+        </form>
     </section>
 
     <section>
         <h2>3. Registreringsformulär (HTML5-validering)</h2>
         
     </section>
-</main>
+    </main>
 
     <footer>
         Denna arbete är en del av kurs arbete på LTU
