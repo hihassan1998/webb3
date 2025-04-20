@@ -1,21 +1,25 @@
-// Funktion to generate an array with 10 unika random wholenumbers between 1 and 100
-function sortedArray() {
+// Generate random numbers
+function generateRandomNumbers() {
   const numbers = [];
-
-  // Generate 10 unique random numbers
   while (numbers.length < 10) {
     const num = Math.floor(Math.random() * 100) + 1;
     if (!numbers.includes(num)) {
       numbers.push(num);
     }
   }
+  return numbers;
+}
 
-  // Sort the numbers in ascending order
-  const unsorted = numbers;
-  // Sort numeric values with sort and comparison function
-  const sorted = [...numbers].sort((a, b) => a - b);
+// Sort the generated array in ascending order
+function sortArray(numbers) {
+  return [...numbers].sort((a, b) => a - b);
+}
 
-  // Display the unsorted and sorted numbers
+
+// Generate and sort the array, then display it
+function sortedArray() {
+  const unsorted = generateRandomNumbers();
+  const sorted = sortArray(unsorted);
   document.getElementById("unsorted").textContent = unsorted.join(", ");
   document.getElementById("sorted").textContent = sorted.join(", ");
 }
