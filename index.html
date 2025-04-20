@@ -2,7 +2,7 @@
 <html lang="sv">
 
 <head>
-    <!-- Head elemnt som ineåller meta taggar och länkan css och js scrpt -->
+    <!-- Add meta tags and links to css och js scrpt -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Labb 3a – Enkla JavaScript-sidor</title>
@@ -11,10 +11,12 @@
 </head>
 
 <body>
+    <!-- add a title to the page -->
     <header>
         <h1>Labb 3a – Enkla JavaScript-sidor</h1>
     </header>
     <main>
+        <!-- Display the array from sortedArray() -->
         <section>
             <h2>1. Slumpmässig array</h2>
             <button onclick="sortedArray()">Generera array</button>
@@ -22,6 +24,7 @@
             <p><strong>Sorterad:</strong> <span id="sorted"></span></p>
         </section>
 
+        <!-- dislay js handled form -->
         <section>
             <h2>2. Registreringsformulär (JavaScript-validering)</h2>
             <form id="jsForm" onsubmit="return validateForm()" method="post" action="thankyou.php">
@@ -36,7 +39,7 @@
                 <p id="jsError" class="error"></p>
             </form>
         </section>
-
+        <!-- dislay html handled form -->
         <section>
             <h2>3. Registreringsformulär (HTML5-validering)</h2>
             <form id="html5Form" method="post" action="thankyou.php">
@@ -49,7 +52,7 @@
             </form>
         </section>
     </main>
-
+    <!-- add footer for layout -->
     <footer>
         Denna arbete är en del av kurs arbete på LTU
     </footer>
