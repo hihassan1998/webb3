@@ -29,5 +29,31 @@ function validateForm() {
   const terms = document.getElementById("jsTerms").checked;
   const error = document.getElementById("jsError");
 
+  error.textContent = "";
 
+  if (username === "") {
+    error.textContent = "Användarnamn krävs.";
+    return false;
+  }
+  if (password.length < 6) {
+    error.textContent = "Lösenordet måste vara minst 6 tecken.";
+    return false;
+  }
+
+  if (password !== confirmPassword) {
+    error.textContent = "Lösenorden matchar inte.";
+    return false;
+  }
+
+  if (!email.includes("@") || email.startsWith("@") || email.endsWith("@")) {
+    error.textContent = "Ogiltig e-postadress.";
+    return false;
+  }
+
+  if (!terms) {
+    error.textContent = "Du måste godkänna villkoren.";
+    return false;
+  }
+
+  return true;
 }
