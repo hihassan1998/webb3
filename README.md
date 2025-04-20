@@ -2,6 +2,10 @@
 
 A small JavaScript project for user registration and number sorting.
 
+## Link to deployment
+
+The web service can be acced at: https://webb3.onrender.com/
+
 ## Features
 - Generates 10 unique random numbers (1–100), displays sorted and unsorted arrays
 - JavaScript-based form validation with error messages
