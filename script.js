@@ -1,4 +1,4 @@
-// Funktion för att generera en array med 10 unika slumpmässiga heltal mellan 1 och 100
+// Funktion to generate an array with 10 unika random wholenumbers between 1 and 100
 function sortedArray() {
   const numbers = [];
 
@@ -20,7 +20,7 @@ function sortedArray() {
   document.getElementById("sorted").textContent = sorted.join(", ");
 }
 
-// Funktion för att validera formuläret med JavaScript
+// Funktion to validate form with Javascript
 function validateForm() {
   const username = document.getElementById("jsUsername").value.trim();
   const password = document.getElementById("jsPassword").value;
@@ -31,25 +31,33 @@ function validateForm() {
 
   error.textContent = "";
 
+  // Check if username is enetered
   if (username === "") {
     error.textContent = "Användarnamn krävs.";
     return false;
   }
+  // Check if password is atleast 6 chars
   if (password.length < 6) {
     error.textContent = "Lösenordet måste vara minst 6 tecken.";
     return false;
   }
-
+  // check if password matches the prevoisly entered password
   if (password !== confirmPassword) {
     error.textContent = "Lösenorden matchar inte.";
     return false;
   }
-
-  if (!email.includes("@") || email.startsWith("@") || email.endsWith("@")) {
-    error.textContent = "Ogiltig e-postadress.";
+  // check if '@' symbol is prenset in email adress and on write possition
+  if (!email.includes("@")) {
+    error.textContent = "Ogiltig e-postadress. Måste includera '@' tecken.";
+    return false;
+  } else if (email.startsWith("@")) {
+    error.textContent = "Ogiltig e-postadress. Kan inte börja med '@' tecken.";
+    return false;
+  } else if (email.endsWith("@")) {
+    error.textContent = "Ogiltig e-postadress. Kan inte avsluta med '@' tecken.";
     return false;
   }
-
+  // Check if terms are accepted before registration
   if (!terms) {
     error.textContent = "Du måste godkänna villkoren.";
     return false;
