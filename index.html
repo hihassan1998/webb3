@@ -41,7 +41,13 @@
 
     <section>
         <h2>3. Registreringsformulär (HTML5-validering)</h2>
-        
+        <form id="html5Form" method="post" action="thankyou.php">
+            <label>Användarnamn: <input type="text" name="username" required /></label><br />
+            <label>Lösenord: <input type="password" name="password" minlength="6" required /></label><br />
+            <label>E-post: <input type="email" name="email" required /></label><br />
+            <label><input type="checkbox" name="terms" required /> Jag har läst villkoren</label><br />
+            <input class="button" type="submit" value="Registrera" />
+        </form>
     </section>
     </main>
 
