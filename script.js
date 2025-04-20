@@ -19,3 +19,15 @@ function sortedArray() {
   document.getElementById("unsorted").textContent = unsorted.join(", ");
   document.getElementById("sorted").textContent = sorted.join(", ");
 }
+
+// Funktion för att validera formuläret med JavaScript
+function validateForm() {
+  const username = document.getElementById("jsUsername").value.trim();
+  const password = document.getElementById("jsPassword").value;
+  const confirmPassword = document.getElementById("jsConfirmPassword").value;
+  const email = document.getElementById("jsEmail").value.trim();
+  const terms = document.getElementById("jsTerms").checked;
+  const error = document.getElementById("jsError");
+
+
+}
